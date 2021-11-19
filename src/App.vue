@@ -6,8 +6,14 @@
       <router-link to="/about">About</router-link>
     </div>
     <router-view />
+    <footer>
+      Jõldak
+      <router-link to="/contact">Contact</router-link>
+    </footer>
   </div>
+  
 </template>
+
 
 <style lang="scss">
 #app {
