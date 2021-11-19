@@ -1,5 +1,5 @@
 <template>
-  <div> 
-    <h1>Main page </h1>
+  <div class="home">
+    <img alt="Logo" src="../assets/zolk.jpg" />
   </div>
 </template>
