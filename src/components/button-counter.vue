@@ -12,7 +12,7 @@ export default {
 </script>
 
 <style scoped>
-.button{
+button{
   background-color: red;
   border: black;
   padding: 15px 32px;
