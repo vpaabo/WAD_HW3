@@ -1,18 +1,18 @@
 <template>
-<button v-on:click="count++">{{count}} likes</button>
+<button v-on:click="$refs.counter.reset">Reset</button>
 </template>
 
 <script>
 export default {
   data: function(){
     return {
-      count:0
+      name: "xd"
   }}
 };
 </script>
 
 <style scoped>
-.button{
+button{
   background-color: red;
   border: black;
   padding: 15px 32px;
