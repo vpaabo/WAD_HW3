@@ -7,7 +7,14 @@ export default {
   data: function(){
     return {
       count:0
-  }}
+  }},
+  mounted() {
+    this.$root.$on('resetLikes', () => {
+      console.log("Signal received.")
+      this.count = 0;
+      return {}
+    })
+  }
 };
 </script>
 

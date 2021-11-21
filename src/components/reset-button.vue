@@ -1,13 +1,21 @@
 <template>
-<button v-on:click="$refs.counter">Reset</button>
+  <section>
+    <button v-on:click="this.resetSignal">Reset</button>
+  </section>
 </template>
 
 <script>
 export default {
   data: function(){
     return {
-      count: 0
-  }}
+      name: "xd"
+  }},
+  methods: {
+    resetSignal() {
+      this.$root.$emit('resetLikes');
+      console.log("Signal sent");
+    }
+  }
 };
 </script>
 
@@ -21,5 +29,6 @@ button{
   display: inline-block;
   font-family: "Comic Sans MS";
   font-size: 16px;
+  border-radius: 8px;
 }
 </style>
