@@ -1,6 +1,6 @@
 <template>
   <div>
-    jõldak <router-link to="/contact">Contact</router-link>
+    Contact us here: <router-link to="/contact">Contact</router-link>
   </div>
 </template>
 
