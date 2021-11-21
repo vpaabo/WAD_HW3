@@ -5,7 +5,7 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {postList: [
-      {id: 1, proficon: "../assets/zolk.jpg", timestamp: "04:20, 25/09/21", caption: "You can’t live a full life on an empty stomach", content: "https://icatcare.org/app/uploads/2018/07/Helping-your-new-cat-or-kitten-settle-in-1.png"},
+      {id: 1, proficon: "../assets/logo.png", timestamp: "04:20, 25/09/21", caption: "You can’t live a full life on an empty stomach", content: "https://icatcare.org/app/uploads/2018/07/Helping-your-new-cat-or-kitten-settle-in-1.png"},
       {id: 2, proficon: "../assets/zolk.jpg", timestamp: "05:27, 25/09/21", caption: "Confidence Level: Selfie with no Filter", content: "https://splicetoday.imgix.net/uploads/posts/photos/26341/rsz_screen_shot_2020-04-01_at_81155_pm.png"},
       {id: 3, proficon: "../assets/zolk.jpg", timestamp: "12:33, 02/10/21", caption: "only a fool for you", content: "https://en.meming.world/images/en/thumb/b/b9/Cursed_Cat.jpg/300px-Cursed_Cat.jpg"},
       {id: 4, proficon: "../assets/zolk.jpg", timestamp: "23:12, 04/10/21", caption: "You don’t cross my mind. You live there", content: "https://i.redd.it/h61v0fk18g351.jpg"},

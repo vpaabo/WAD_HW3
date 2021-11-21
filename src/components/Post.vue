@@ -1,17 +1,37 @@
 <template>
   <div>
-    <img class='prof-icon' id='profile-pic1' src = {{ proficon }}>
-    <span class="timestamp">{{ timestamp }}</span>
-    <img class="content-img" src = {{ content }}>
-    <span class="caption">{{ caption }}</span>
-    <button-counter />
+    <ul>
+      <li class="item" v-for = "product in productListsale" :key="product.id">
+        <span class="prof-icon"><img :src="product.proficon" alt="alt" /> </span> <br>
+        <span class="timestamp"> {{product.timestamp}} </span> <br>
+        <span class="caption"> {{product.caption}} </span> <br>
+        <span class="content-img"><img :src="product.content" alt="alt"/> </span>
+        <button-counter></button-counter>
+      </li>
+    </ul>
   </div>
 </template>
 
 <script>
 import buttonCounter from './button-counter.vue'
 export default {
+  name: "posts",
   components: { buttonCounter },
+  computed: {
+    productListsale(){
+      var postListsale = this.$store.state.postList.map(product => {
+          return{ proficon: "** "+ product.proficon+ " **",
+            timestamp: product.timestamp,
+            caption: product.caption,
+            content: product.content
+          }
+        }
+      );
+      return postListsale
+    },
+    productList(){
+      return this.$store.state.productList
+    }}
 }
 </script>
 
