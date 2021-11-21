@@ -13,13 +13,16 @@ export default {
 
 <style scoped>
 button{
-  background-color: red;
+  background-color: rgb(252, 100, 100);
   border: black;
   padding: 15px 32px;
+  border-radius: 5px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-family: "Comic Sans MS";
   font-size: 16px;
+  width: 150px;
+  border-radius: 8px;
 }
 </style>

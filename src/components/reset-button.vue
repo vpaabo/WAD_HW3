@@ -1,12 +1,12 @@
 <template>
-<button v-on:click="$refs.counter.reset">Reset</button>
+<button v-on:click="$refs.counter">Reset</button>
 </template>
 
 <script>
 export default {
   data: function(){
     return {
-      name: "xd"
+      count: 0
   }}
 };
 </script>

@@ -1,15 +1,13 @@
 <template>
-  <div>
-    <ul>
-      <li class="item" v-for = "product in productListsale" :key="product.id">
-        <span class="prof-icon"><img :src="product.proficon" alt="alt" /> </span> <br>
-        <span class="timestamp"> {{product.timestamp}} </span> <br>
-        <span class="caption"> {{product.caption}} </span> <br>
-        <span class="content-img"><img :src="product.content" alt="alt"/> </span>
-        <button-counter></button-counter>
-      </li>
-    </ul>
-  </div>
+  <section>
+    <div v-for = "post in postList" :key="post.id">
+      <img :src=post.proficon alt="alt" class="prof-icon"/>
+      <span class="timestamp"> {{post.timestamp}} </span> <br>
+      <img :src="post.content" alt="alt" class="content-img"/>
+      <span class="caption"> {{post.caption}} </span> <br>
+      <button-counter></button-counter>
+    </div>
+  </section>
 </template>
 
 <script>
@@ -18,28 +16,34 @@ export default {
   name: "posts",
   components: { buttonCounter },
   computed: {
-    productListsale(){
-      var postListsale = this.$store.state.postList.map(product => {
-          return{ proficon: "** "+ product.proficon+ " **",
-            timestamp: product.timestamp,
-            caption: product.caption,
-            content: product.content
+    postList(){
+      var postListsale = this.$store.state.postList.map(post => {
+          return{ proficon: post.proficon,
+            timestamp: post.timestamp,
+            caption: post.caption,
+            content: post.content
           }
         }
       );
       return postListsale
-    },
-    productList(){
-      return this.$store.state.productList
-    }}
+    }
+  }
 }
 </script>
 
 
 <style scoped lang="scss">
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  margin: 30px auto;
+}
+
 div {
   flex-grow: 10;
-  background-color: #FFFFFF;
+  background-color: #d4d4d4;
   display: block;
   margin-top: 20px;
   margin-left: 40px;
@@ -57,6 +61,7 @@ div {
   height: 40px;
   margin: 5px;
   border-radius: 50%;
+  float: left;
 }
 
 .caption{
