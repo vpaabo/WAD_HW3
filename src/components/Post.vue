@@ -1,11 +1,11 @@
 <template>
   <section>
-    <div v-for = "post in postList" :key="post.id">
+    <div v-for = "post in postList" :key="post.id" :id="post.id">
       <img :src=post.proficon alt="alt" class="prof-icon"/>
       <span class="timestamp"> {{post.timestamp}} </span> <br>
       <img :src="post.content" alt="alt" class="content-img"/>
       <span class="caption"> {{post.caption}} </span> <br>
-      <button-counter></button-counter>
+      <button-counter :id="post.id" :likes="post.likes"></button-counter>
     </div>
   </section>
 </template>
@@ -21,7 +21,9 @@ export default {
           return{ proficon: post.proficon,
             timestamp: post.timestamp,
             caption: post.caption,
-            content: post.content
+            content: post.content,
+            id: post.id,
+            likes: post.likes
           }
         }
       );

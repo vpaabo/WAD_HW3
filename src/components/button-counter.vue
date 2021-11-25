@@ -1,19 +1,24 @@
 <template>
-<button v-on:click="count++">{{count}} likes</button>
+  <button v-on:click="this.addLike">{{this.likes}} likes</button>
 </template>
 
 <script>
 export default {
+  props:['id', 'likes'],
   data: function(){
-    return {
-      count:0
-  }},
+    return {}
+  },
   mounted() {
     this.$root.$on('resetLikes', () => {
-      console.log("Signal received.")
-      this.count = 0;
+      console.log("Signal received.");
+      this.$store.commit('reset', this.id);
       return {}
     })
+  },
+  methods: {
+    addLike() {
+      this.$store.commit('increment', this.id);
+    }
   }
 };
 </script>
