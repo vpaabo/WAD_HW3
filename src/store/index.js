@@ -15,7 +15,12 @@ export default new Vuex.Store({
       {id: 8, likes: 0, proficon: require("../assets/zolk.jpg"), timestamp: "10:20, 11/11/21", caption: "Clever as a devil, twice as pretty", content: "https://i.redd.it/otdzarzwtrc41.jpg"},
       {id: 9, likes: 0, proficon: require("../assets/zolk.jpg"), timestamp: "22:22, 25/11/21", caption: "Chocolate is cheaper than thie", content: "https://i.redd.it/ctfu0q2tyht41.jpg"},
       {id: 10, likes: 0, proficon: require("../assets/zolk.jpg"), timestamp: "13:25, 03/12/21", caption: "put ya feelings to the side, lil' baby", content: "https://i.redd.it/w4faahg5ey441.jpg"},
-    ]},
+    ],
+    contactNr: "+372555666",
+    contactMail: "contactus@gmail.com",
+    contactAddress: "Narva mnt 18, 51009 Tartu",
+    aboutUs: "Some descriptive text about us and what we do."
+  },
   mutations: {
     increment (state, idNr) {
       console.log(idNr)
